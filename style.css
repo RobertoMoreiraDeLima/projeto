@@ -17,7 +17,7 @@ box-sizing: border-box;
 
 :root {
 --text-color: white;
---bg-url: url(./assets/Android\ Large\ -\ 1.png);
+--bg-url: url(./assets/bg-mobile-dark.jpg.jpg);
 --stroke-color: rgba(255, 255, 255, 0.5);
 --surface-color: rgba(255, 255, 255, 0.1);
 --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -36,6 +36,7 @@ box-sizing: border-box;
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body *{
@@ -167,3 +168,13 @@ footer {
   font-size: 14px;
 }
 
+/*midia queries*/
+@media (max-width:700px){
+:root {
+  --bg-url: url(./assets/bg-desktop.png);
+}
+
+.light { 
+  --bg-url: url(./assets/bg-light.png);
+}
+}
