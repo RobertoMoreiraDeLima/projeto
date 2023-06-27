@@ -1,4 +1,4 @@
-body{
+body {
   /*
   background-image: url(./assets/Android\ Large\ -\ 1.png);
   background-repeat: no-repeat;
@@ -6,25 +6,25 @@ body{
   background-size: cover;
   */
 
-/*backgroound: color image repeat  position/size */
-background: url(./assets/Android\ Large\ -\ 1.png) no-repeat top center/cover;
+  /*backgroound: color image repeat  position/size */
+  background: url(./assets/Android\ Large\ -\ 1.png) no-repeat top center/cover;
 }
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
---text-color: white;
---bg-url: url(./assets/bg-mobile-dark.jpg.jpg);
---stroke-color: rgba(255, 255, 255, 0.5);
---surface-color: rgba(255, 255, 255, 0.1);
---surface-color-hover: rgba(255, 255, 255, 0.05);
---highlight-color: rgba(255, 255, 255, 0.2);
---switch-bg-url: url(./assets/moon-stars.svg);
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile-dark.jpg.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
 }
-.light{
+.light {
   --text-color: black;
   --bg-url: url(./assets/Background.light.png);
   --stroke-color: rgba(0, 0, 0, 0.5);
@@ -39,13 +39,11 @@ body {
   height: 100vh;
 }
 
-body *{
-font-family: 'Inter', sans-serif;
-color: var(--text-color)
-
-
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
-#container{
+#container {
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
@@ -63,13 +61,13 @@ color: var(--text-color)
 }
 
 #profile p {
-  font-weight:500;
+  font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
 }
 
 /*switch*/
-#switch{
+#switch {
   position: relative;
   width: 64px;
   margin: 4px auto;
@@ -87,14 +85,18 @@ color: var(--text-color)
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.4s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+ animation: slide-in 0.4s forwards;
+}
+#switch button:hover {
+  outline: 8px solid  var(--highlight-color);
 }
 
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -120,13 +122,13 @@ ul li a {
   justify-content: center;
 
   padding: 16px 24px;
-  
+
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px; /*arredondamento de borda*/
-  
+
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);/*esse é o modo responsivo com o safari*/
+  -webkit-backdrop-filter: blur(4px); /*esse é o modo responsivo com o safari*/
 
   text-decoration: none;
   font-weight: 500;
@@ -136,8 +138,8 @@ ul li a {
 
 /* pseudo-selector */
 ul li a:hover {
-   background: var(--surface-color-hover);
-   border: 1.5px solid var(--text-color);
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
 }
 
 #social-links {
@@ -149,17 +151,17 @@ ul li a:hover {
 }
 
 #social-links a {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
 
   transition: background 0.2s;
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-#social-links a:hover{
-  background: var(--highlight-color)
+#social-links a:hover {
+  background: var(--highlight-color);
 }
 
 footer {
@@ -169,12 +171,30 @@ footer {
 }
 
 /*midia queries*/
-@media (max-width:700px){
-:root {
-  --bg-url: url(./assets/bg-desktop.png);
+@media (max-width: 2000px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.png);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-light.png);
+  }
+}
+/*animation*/ 
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
 
-.light { 
-  --bg-url: url(./assets/bg-light.png);
-}
+@keyframes slide-back {
+  from{
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }

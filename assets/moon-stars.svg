@@ -5,7 +5,7 @@
 <rect x="8.5" y="10.5" width="63" height="23" rx="11.5" stroke="white" stroke-opacity="0.5"/>
 </g>
 <g filter="url(#filter2_d_7_476)">
-<rect x="8" y="6" width="32" height="32" rx="16" fill="white" shape-rendering="crispEdges"/>
+<rect x="50" y="40" width="32" height="32" rx="16" fill="white" shape-rendering="crispEdges"/>
 <path d="M29.5 21V18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M31 19.5H28" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M26.5 15.5V17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
